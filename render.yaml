@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: monday-bi-agent
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: MONDAY_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: WORK_ORDERS_BOARD_ID
+        sync: false
+      - key: DEALS_BOARD_ID
+        sync: false
+      - key: PORT
+        value: 8000
